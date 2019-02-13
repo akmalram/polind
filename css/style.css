@@ -1,0 +1,562 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+
+.custom_btn {
+    display: inline-block;
+    padding: 7px 35px;
+    background: #FFC74A;
+    color: #B98000;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px !important;
+    cursor: pointer;
+    -webkit-transition: .5s;
+    transition: .5s;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.custom_btn:hover {
+    background: rgb(235, 175, 46);
+}
+.custom_btn:active {
+    background: rgb(255, 183, 29);
+}
+.close_btn {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.close_btn span {
+    display: inline-block;
+    width: 90%;
+    height: 4px;
+    background: #000;
+    border-radius: 40%;
+}
+.close_btn span:first-of-type {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.close_btn span:last-of-type {
+    -webkit-transform: rotate(45deg) translate(-3px, -3px);
+            transform: rotate(45deg) translate(-3px, -3px);
+}
+
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/header-bg.jpg) no-repeat center center;
+    background-size: cover;
+    -webkit-box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.438);
+            box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.438);
+}
+
+.menuToggleBtn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    right: 30px;
+    top: 45px;
+    padding: 3px 0;
+    cursor: pointer;
+    transition: .7s;
+}
+.menuToggleBtn span {
+    width: 70%;
+    height: 2px;
+    background: #fff;
+}
+.menuToggleBtnClick {
+    background: #fff;
+    border-color: #000;
+}
+.menuToggleBtnClick span {
+    background: #000000;
+}
+
+.navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    min-height: 140px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 40px;
+    position: relative;
+}
+.menu-list {
+    padding: 0;margin: 0;
+    list-style: none;
+}
+
+.menu-list li {
+    display: inline-block;
+    margin: 0px 23px;
+}
+.menu-list li a {
+    color: #fff;
+    text-decoration: none;
+}
+.search-popup_btn {
+    background: transparent;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: -5px;
+    -webkit-transition: .7s;
+    transition: .7s;
+}
+.search-popup_btn:hover {
+    -webkit-box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.733);
+            box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.733); 
+}
+/* popup */
+.search_popup {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: inset 0 0 0 1000px #0000006c;
+            box-shadow: inset 0 0 0 1000px #0000006c;
+}
+.search_popup form {
+    width: 400px;
+    background: #D9C0A5;
+    height: 300px;
+    text-align: center;
+    position: relative;
+}
+.search_popup p {
+    font-size: 36px;
+    color: #fff;
+    font-style: italic;
+}
+.search_popup #search {
+    display: block;
+    margin: 0px auto;
+    background: transparent;
+    border: 1px solid #999999;
+    padding: 10px 20px;
+    color: #fff;
+    font-style: italic;
+    font-size: 1.3em;
+}
+.search_popup #search::-webkit-input-placeholder {
+    color: #fff; 
+    -webkit-transition: .7s; 
+    transition: .7s;
+}
+.search_popup #search:-ms-input-placeholder {
+    color: #fff; 
+    -webkit-transition: .7s; 
+    transition: .7s;
+}
+.search_popup #search::placeholder {
+    color: #fff; 
+    -webkit-transition: .7s; 
+    transition: .7s;
+}
+.search_popup #search:focus::-webkit-input-placeholder {
+    font-size: 14px;
+    padding-left: 100px;
+}
+.search_popup #search:focus:-ms-input-placeholder {
+    font-size: 14px;
+    padding-left: 100px;
+}
+.search_popup #search:focus::placeholder {
+    font-size: 14px;
+    padding-left: 100px;
+}
+.search_popup .custom_btn {
+    margin-top: 20px;
+}
+.header_desc {
+    padding-top: 30px;
+    color: #fff;
+    text-align: center;
+}
+.header_desc h1 {
+    font-size: 62px;
+    margin-bottom: 30px;
+}
+.header_desc h1 span {
+    color: #ED6950;
+}
+.header_desc p  {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.popular_places {
+    position: relative;
+    bottom: -150px;
+    text-align: center;
+    color: #fff;
+}
+.popular_places .hotels{
+    width: 19.27%;
+    min-height: 303px;
+    background-size: cover;
+    -webkit-box-shadow: inset 0 0 0 1000px #00000080;
+            box-shadow: inset 0 0 0 1000px #00000080;
+    -webkit-transition: .3s;
+    transition: .3s;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+}
+.hotel_name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    opacity: 0;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+.hotel_location {
+    display: inline-block;
+    margin-bottom: 50px;
+    color: #FFC74A;
+    font-size: 14px;
+    -webkit-transition: .5s;
+    transition: .5s;
+    opacity: 0;
+}
+
+.popular_places .hotels:hover > .hotel_name {
+    opacity: 1;
+}
+.popular_places .hotels:hover > .hotel_location {
+    opacity: 1;
+}
+.popular_places .hotels:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+.popular_places .row {
+    margin: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.hotel-1 {
+    background: url(../img/hotel.jpg);
+}
+.hotel-2 {
+    background: url(../img/hotel-2.jpg);
+}
+.hotel-3 {
+    background: url(../img/hotel-3.jpg);
+}
+.hotel-4 {
+    background: url(../img/hotel-4.jpg);
+}
+.hotel-5 {
+    background: url(../img/hotel-5.jpg);
+}
+
+section {
+    padding-top: 200px;
+    background: #FAFAFB;
+    text-align: center;
+    color: #606F81;
+}
+.content_title {
+    color: #606F81;
+    font-size: 25px;
+}
+.city_list form {
+    display: inline-block;
+    width: 65.81%;
+    position: relative;
+}
+.city_list form  #search-place {
+    width: 100%;
+    padding: 16px 10px;
+    border: none;
+    border-radius: 30px;
+}
+.city_list form  #search-place::-webkit-input-placeholder {
+    font-size: 1.5em;
+    color: #606F81;
+}
+.city_list form  #search-place:-ms-input-placeholder {
+    font-size: 1.5em;
+    color: #606F81;
+}
+.city_list form  #search-place::placeholder {
+    font-size: 1.5em;
+    color: #606F81;
+}
+.city_list form button {
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    cursor: pointer;
+}
+.city_cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 30px !important;
+}
+.city_cards__name {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+.city_cards__desc {
+    font-size: .8em;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.city_cards .custom_btn {
+    background: #fff;
+    color: #BDC8D9;
+    text-transform: uppercase;
+} 
+.city_cards .custom_btn:hover {
+    background: #FFC74A;
+    color: #B98000;
+}
+.city_list .row {
+    margin-top: 40px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+.explore {
+    margin: 100px 0;
+}
+.explore__aboutCity {
+    text-align: left;
+}
+.explore__aboutCity_title {
+    color: #F8C759;
+    font-size: 36px;
+}
+.explore__aboutCity_text {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.explore__cityPicture img {
+    width: 80%;
+    -webkit-box-shadow: 35px 35px 0 15px #FFC74A;
+            box-shadow: 35px 35px 0 15px #FFC74A;
+}
+.signUp {
+    width: 100%;
+    height: 500px;
+    background: url(../img/contenr-bg.jpg) no-repeat  0 0;
+    background-size: cover;
+    padding-top: 100px;
+}
+.signUp h2 {
+    font-size: 62px;
+    color: #fff;
+}
+.signUp .custom_btn {
+    font-size: 14px;
+}
+.signUp p {
+    color: #fff;
+}
+.signUp p a {
+    color: #DFAD40;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.signUp p a:hover {
+    text-shadow: 0 0 3px #DFAD40;
+}
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 31px;
+    color: #DFAD40;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    section {
+        padding-top: 300px;
+    }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1024px) {
+    .city_cards {
+        width: 40%;
+        margin: 0 30px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .navbar {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        padding: 0;
+        background: rgba(0, 0, 0, 0.486);
+    }
+    .logo {
+        margin: 30px;
+    }
+    .menu-list  {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: .7s;
+        transition: .7s;
+    }
+    .showing {
+        max-height: 310px;  
+    }
+    .menu-list li {
+        display: block;
+        margin: 0;
+        width: 100%;
+        padding: 20px 30px;
+    }
+    .menu-list li:hover {
+        background: rgba(255, 255, 255, 0.377);
+    }
+    .menu-list li:last-of-type {
+        text-align: center;
+    }
+    .menuToggleBtn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .popular_places .row {
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    }
+    .hotels {
+        width: 32% !important;
+        margin-bottom: 20px;
+    }
+    section {
+        padding-top: 600px;
+    } 
+    .city_list .row {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    } 
+    .city_cards {
+        width: 100%;
+    }
+    .explore__aboutCity {
+        margin-bottom: 40px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .popular_places {
+        -webkit-box-pack: center !important;
+            -ms-flex-pack: center !important;
+                justify-content: center !important;
+        -webkit-box-align: center !important;
+            -ms-flex-align: center !important;
+                align-items: center !important;
+    }
+    .hotels {
+        width: 60% !important;
+        
+    }
+    .popular_places .row {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    section {
+        padding-top: 1600px;
+    }
+    .header_desc h1 {
+        font-size: 41px;
+    }
+    .signUp h2 {
+        font-size: 41px;
+    }
+}
